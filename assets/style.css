@@ -1,0 +1,242 @@
+/* Fonts (self-hosted, SIL Open Font License) */
+@font-face { font-family: "Spinnaker"; src: url("fonts/spinnaker-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Raleway"; src: url("fonts/raleway-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-300-italic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+/* Extended Latin characters (e.g., ć in Brozović) */
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-ext-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-ext-300-italic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-ext-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-ext-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Jost"; src: url("fonts/jost-latin-ext-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
+:root {
+  --text: #303030;
+  --accent: #e33f0e;
+  --band: #dcdcdc;
+  --display: "Spinnaker", "Trebuchet MS", sans-serif;
+  --body: "Jost", "Futura", "Century Gothic", sans-serif;
+  --sub: "Raleway", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main { flex: 1; }
+p { margin: 0; }
+a { color: inherit; }
+b, strong { font-weight: 500; }
+.wrap { width: 980px; max-width: calc(100% - 40px); margin: 0 auto; }
+
+/* ---------- Header ---------- */
+.site-header { background: var(--band); }
+.site-header .wrap {
+  height: 204px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.brand { padding-top: 50px; }
+.brand h1 {
+  margin: 0 0 6px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.4px;
+}
+.brand h1 a { text-decoration: none; }
+.brand p { line-height: 19.2px; }
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 85px 0 0;
+  display: flex;
+  margin-right: 52px;
+}
+.site-nav a {
+  display: block;
+  width: 107px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+  transition: color .2s;
+}
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--band); margin-top: 72px; }
+.site-footer .wrap {
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.site-footer .social { margin-right: 21px; text-decoration: none; font-size: 13px; }
+.site-footer .social:hover { text-decoration: underline; }
+
+/* ---------- Shared ---------- */
+.accent-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: var(--accent);
+  margin: 0 0 22px;
+  padding-bottom: 14px;
+  position: relative;
+}
+.accent-title::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 30px; height: 3px;
+  background: var(--accent);
+}
+.page-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+.section-title {
+  font-family: var(--sub);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+/* ---------- Home ---------- */
+.home {
+  padding-top: 59px;
+  display: grid;
+  grid-template-columns: 461px 1fr;
+  column-gap: 81px;
+}
+.home .photo { width: 461px; height: 504px; object-fit: cover; display: block; background: #eee; }
+.home .info { display: flex; flex-direction: column; padding-top: 56px; }
+.home .info .accent-title { max-width: 385px; }
+.home .info p { line-height: 24px; }
+.btn-outline {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-block;
+  width: 128px;
+  padding: 7px 0;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--display);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.btn-outline:hover { background: var(--accent); color: #fff; }
+
+/* ---------- About ---------- */
+.about-box {
+  margin-top: 66px;
+  display: grid;
+  grid-template-columns: 235px 1fr;
+  background: var(--band);
+  min-height: 357px;
+}
+.about-box .photo { width: 235px; height: 100%; min-height: 357px; object-fit: cover; display: block; }
+.about-box .text { padding: 27px 21px 40px 35px; }
+.about-box .text p + p { margin-top: 20px; }
+.about-cols {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 554px 1fr;
+}
+.edu .degree { line-height: 27.2px; }
+.edu .school { font-style: italic; font-size: 15px; line-height: 25.5px; margin-bottom: 27px; }
+.interests p { line-height: 24px; margin-bottom: 24px; max-width: 277px; }
+
+/* ---------- Research ---------- */
+.research { padding: 70px 21px 0; }
+.research p { margin-bottom: 20px; }
+.research ul { margin: 0 0 20px; padding-left: 29px; }
+.research li { line-height: 1.3; }
+.banner { display: block; width: 100%; height: 301px; object-fit: cover; margin-top: 98px; }
+
+/* ---------- Publications ---------- */
+.pubs { padding: 70px 30px 0; }
+.pubs .section-title { margin-top: 20px; }
+.pub-list { margin: 0 0 0 22px; max-width: 762px; }
+.pub-list p { line-height: 25.6px; margin-bottom: 25.6px; }
+.pub-list i { font-weight: 500; }
+
+/* ---------- Teaching ---------- */
+.teaching { padding: 70px 30px 0; }
+.course {
+  display: grid;
+  grid-template-columns: 146px 633px;
+  margin-bottom: 54px;
+}
+.course h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--accent);
+  margin: 0;
+  max-width: 120px;
+}
+.course p { font-size: 14px; line-height: 22.4px; }
+.btn-solid {
+  grid-column: 2;
+  justify-self: end;
+  margin: 31px 21px 0 0;
+  display: inline-block;
+  width: 142px;
+  height: 40px;
+  line-height: 40px;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 300;
+  transition: opacity .2s;
+}
+.btn-solid:hover { opacity: .85; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 1000px) {
+  .site-header .wrap { height: auto; flex-direction: column; padding-bottom: 20px; }
+  .brand { padding-top: 30px; }
+  .site-nav ul { padding-top: 16px; margin: 0 0 0 -20px; flex-wrap: wrap; }
+  .site-nav a { width: auto; padding: 0 20px; }
+  .home, .about-box, .about-cols, .course { grid-template-columns: 1fr; }
+  .home { row-gap: 30px; padding-top: 30px; }
+  .home .photo { width: 100%; max-width: 461px; height: auto; aspect-ratio: 461 / 504; }
+  .home .info { padding-top: 0; }
+  .home .info .btn-outline { margin-top: 30px; }
+  .about-box .photo { width: 100%; height: 320px; min-height: 0; }
+  .about-cols { row-gap: 20px; }
+  .research, .pubs, .teaching { padding-left: 0; padding-right: 0; padding-top: 40px; }
+  .pub-list { margin-left: 0; }
+  .page-title { font-size: 42px; }
+  .course h3 { max-width: none; margin-bottom: 8px; }
+  .btn-solid { grid-column: 1; justify-self: start; margin: 16px 0 0; }
+  .banner { margin-top: 40px; height: 200px; }
+}
